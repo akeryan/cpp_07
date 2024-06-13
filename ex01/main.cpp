@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 14:07:50 by akeryan           #+#    #+#             */
-/*   Updated: 2024/06/13 14:59:48 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/06/13 16:35:44 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main(void)
 	int fSize = sizeof(arrF)/sizeof(arrF[0]);
 
 	std::string arrStr[] = {"one", "two", "three"};
-	int sSize = 3; 
+	int sSize = sizeof(arrStr) / sizeof(arrStr[0]);
 		
 	::iter(arrInt, intSize, printInt);
 	::iter(arrF, fSize, printFloat);
