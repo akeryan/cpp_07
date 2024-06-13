@@ -6,7 +6,7 @@
 #    By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/13 13:18:01 by akeryan           #+#    #+#              #
-#    Updated: 2024/06/13 16:20:29 by akeryan          ###   ########.fr        #
+#    Updated: 2024/06/13 17:07:24 by akeryan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ RM = rm -rf
 
 SRC_FILES = main.cpp	
 
-INCLUDE_FILES = iter.hpp	
+INCLUDE_FILES = Array.hpp	
 
 OBJ = $(patsubst %.cpp, %.o, $(SRC_FILES))
 

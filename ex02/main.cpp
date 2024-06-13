@@ -6,7 +6,40 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 16:21:27 by akeryan           #+#    #+#             */
-/*   Updated: 2024/06/13 16:21:28 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/06/13 19:51:35 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Array.hpp"
+#include <iostream>
+
+int main(void)
+{
+	Array<int> A(3);
+	Array<int> B;
+
+	for (int i = 0; i < 3; i++) {
+		A[i] = i + 3;
+	}
+
+	std::cout << "array A: "<< A << std::endl;
+
+	B = A;
+	std::cout << "array B: " << B << std::endl;
+	A[0] = 7;
+	std::cout << "array B: " << B << std::endl;
+
+	Array<int> C(A);
+	std::cout << "array C: " << C << std::endl;
+	C[0] = 9;
+	std::cout << "array A: " << A << std::endl;
+	std::cout << "array C: " << C << std::endl;
+
+	try {
+		A[4] = 0;
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	return 0;
+}
