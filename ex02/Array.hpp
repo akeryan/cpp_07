@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 16:26:56 by akeryan           #+#    #+#             */
-/*   Updated: 2024/06/13 19:47:43 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/06/14 07:44:07 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Array
 		~Array();
 		Array(unsigned int n);
 		Array(const Array &other);
-		T &operator[] (unsigned int index);
-		const T &operator[](unsigned int index) const;
+		T &operator[] (const unsigned int index);
+		const T &operator[](const unsigned int index) const;
 		const Array &operator=(const Array &other);
 		unsigned int size(void) const;
 	private:
@@ -63,7 +63,7 @@ Array<T>::Array(const Array &other)
 }
 
 template <typename T>
-T &Array<T>::operator[](unsigned int index)
+T &Array<T>::operator[](const unsigned int index)
 {
 	if (index < 0 || index >= _arraySize)
 		throw(std::out_of_range("Index is out of range"));
@@ -71,7 +71,7 @@ T &Array<T>::operator[](unsigned int index)
 }
 
 template <typename T>
-const T &Array<T>::operator[](unsigned int index) const
+const T &Array<T>::operator[](const unsigned int index) const
 {
 	if (index < 0 || index >= _arraySize)
 		throw(std::out_of_range("Index is out of range"));
