@@ -6,12 +6,13 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 16:21:27 by akeryan           #+#    #+#             */
-/*   Updated: 2024/06/13 19:51:35 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/06/14 07:26:15 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Array.hpp"
 #include <iostream>
+#include "Array.hpp"
+#include "SomeClass.hpp"
 
 int main(void)
 {
@@ -39,6 +40,11 @@ int main(void)
 		A[4] = 0;
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
+	}
+
+	Array<SomeClass> D[3];
+	for (int i = 0; i < 3; i++) {
+		D[i] = SomeClass(i + 10);
 	}
 
 	return 0;
