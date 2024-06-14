@@ -6,27 +6,13 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 14:07:50 by akeryan           #+#    #+#             */
-/*   Updated: 2024/06/13 16:35:44 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/06/14 07:11:15 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "iter.hpp"
-
-void printInt(int a)
-{
-	std::cout << a << std::endl;
-}
-
-void printFloat(float a)
-{
-	std::cout << a << std::endl;
-}
-
-void printString(std::string str)
-{
-	std::cout << str << std::endl;
-}
+#include "Awesome.hpp"
 
 int main(void)
 {
@@ -39,9 +25,9 @@ int main(void)
 	std::string arrStr[] = {"one", "two", "three"};
 	int sSize = sizeof(arrStr) / sizeof(arrStr[0]);
 		
-	::iter(arrInt, intSize, printInt);
-	::iter(arrF, fSize, printFloat);
-	::iter(arrStr, sSize, printString);
+	::iter(arrInt, intSize, print);
+	::iter(arrF, fSize, print);
+	::iter(arrStr, sSize, print);
 
 	return 0;
 }

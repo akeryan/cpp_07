@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 13:32:37 by akeryan           #+#    #+#             */
-/*   Updated: 2024/06/13 14:04:15 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/06/14 06:43:11 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int main(void)
 	std::cout << "c = " << c << ", d = " << d << std::endl;
 	std::cout << "min(c, d) = " << ::min(c,d) << std::endl;
 	std::cout << "max(c, d) = " << ::max(c,d) << std::endl;
-
+	
 	return 0;
 }
